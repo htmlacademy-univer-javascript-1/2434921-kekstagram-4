@@ -21,7 +21,7 @@ const findNumber = function(string){
   const newString = string.toString();
   let number = '';
   for(let i = 0; i < newString.length; i++){
-    if(!Number.isNan(parseInt(newString[i], 10))){
+    if(!Number.isNaN(parseInt(newString[i], 10))){
       number += newString[i];
     }
   }
