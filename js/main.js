@@ -1,2 +1,3 @@
 import {getPhoto} from './create-pictures.js';
-getPhoto();
+import { renderThumbnail } from './modules/render-thumbnail.js';
+renderThumbnail(getPhoto());
