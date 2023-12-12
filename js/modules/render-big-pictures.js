@@ -1,4 +1,4 @@
-const bigPicture = document.querySelector('.big-picture');
+const bigPicture = document.querySelector('.big-picture.js');
 const removeButton = bigPicture.querySelector('.big-picture__cancel');
 
 const bigPictureImg = bigPicture.querySelector('.big-picture__img img');
