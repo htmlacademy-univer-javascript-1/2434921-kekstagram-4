@@ -1,3 +1,11 @@
-import {getPhoto} from './create-pictures.js';
+import { getPhoto } from './modules/create-pictures.js';
 import { renderThumbnail } from './modules/render-thumbnail.js';
-renderThumbnail(getPhoto());
+import { addEventListenerToPicture } from './modules/render-big-pictures.js';
+
+const pictures = [];
+for (let i = 0; i < 25; i++) {
+  pictures.push(getPhoto());
+}
+
+renderThumbnail(pictures);
+addEventListenerToPicture(pictures);
