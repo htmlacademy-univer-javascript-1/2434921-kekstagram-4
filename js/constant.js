@@ -1,7 +1,18 @@
-const photos = [];
-const photosUrl = [];
-const photosId = [];
-const commentId = [];
+export const COUNT_PHOTOS = 25;
+
+export const MAX_HASHTAGS_COUNT = 5;
+
+export const MAX_DESCRIPTION_LENGTH = 140;
+
+export const SCALE = {
+  MIN: 25,
+  MAX: 100
+};
+
+export const SCALE_STEP = 25;
+
+export const DEFAULT_SCALE = 100;
+
 const MESSAGES = [
   'Всё отлично!',
   'В целом всё неплохо. Но не всё.',
@@ -50,4 +61,4 @@ const DESCRIPTIONS = [
   'Описание 25'
 ];
 
-export{photos, photosUrl, photosId, commentId, MESSAGES, NAMES, DESCRIPTIONS};
+export{MESSAGES, NAMES, DESCRIPTIONS};
