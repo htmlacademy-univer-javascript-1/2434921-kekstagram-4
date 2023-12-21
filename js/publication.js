@@ -1,6 +1,7 @@
 import { onDocumentKeydown } from './utils.js';
 import { MAX_HASHTAGS_COUNT, MAX_DESCRIPTION_LENGTH } from './constant.js';
 import {resetScale} from './scale.js';
+import { initEffect, resetEffect } from './effects.js';
 
 const uploadForm = document.querySelector('.img-upload__form');
 const uploadInput = uploadForm.querySelector('.img-upload__input');
@@ -77,6 +78,7 @@ pristine.addValidator(
 
 function closeOverlay(){
   imageOverlay.classList.add('hidden');
+  resetEffect();
   resetScale();
   document.body.classList.remove('modal-open');
   closeBtn.removeEventListener('click', closeOverlay);
@@ -88,6 +90,7 @@ function closeOverlay(){
 }
 
 function openOverlay() {
+  initEffect();
   imageOverlay.classList.remove('hidden');
   document.body.classList.add('modal-open');
   closeBtn.addEventListener('click', closeOverlay);
